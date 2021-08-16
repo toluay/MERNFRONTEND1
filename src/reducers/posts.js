@@ -1,6 +1,7 @@
-import { FETCH_ALL, CREATE, UPDATE, DELETE} from '../constants/actionTypes';
+import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE} from '../constants/actionTypes';
 
-export default (posts = [], action) => {
+const postReducer = (posts = [], action) => {
+
     switch (action.type) {
         
         case FETCH_ALL:
@@ -17,3 +18,5 @@ export default (posts = [], action) => {
             return posts;
     }
 }
+
+export default postReducer;
