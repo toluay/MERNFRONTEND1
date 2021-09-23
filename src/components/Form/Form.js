@@ -15,6 +15,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
   useEffect(() => {
     if (post) setPostData(post);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [post]);
 
   const clear = () => {
