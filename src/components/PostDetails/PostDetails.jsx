@@ -8,3 +8,4 @@ import { useParams, useHistory } from 'react-router-dom';
 const Post = () => {
 
 }
+export default Post;
