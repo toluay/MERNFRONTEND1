@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import { getPosts } from '../../actions/posts';
 import Posts from '../Posts/Posts';
 import Form from '../Form/Form';
-
+import Pagination from '../Pagination';
+import useStyles from './styles';
 const Home = () => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
@@ -24,6 +25,9 @@ const Home = () => {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
+            <Paper className={classes.pagination} elevation={6}>
+                <Pagination page={page} />
+              </Paper>
           </Grid>
         </Grid>
       </Container>
