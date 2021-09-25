@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Paginate = () => {
     const classes = useStyles();
+    
     return  (
         <Pagination
           classes={{ ul: classes.ul }}
