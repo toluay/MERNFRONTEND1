@@ -39,6 +39,11 @@ const Home = () => {
     }
   };
 
+
+  const handleAddChip = (tag) => setTags([...tags, tag]);
+
+  const handleDeleteChip = (chipToDelete) => setTags(tags.filter((tag) => tag !== chipToDelete));
+
   return (
     <Grow in>
       <Container maxWidth="xl">
