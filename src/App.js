@@ -6,7 +6,9 @@ import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Auth from './components/Auth/Auth';
 
-const App = () => (
+const App = () =>{ 
+  const user = JSON.parse(localStorage.getItem('profile'));
+  return (
   <BrowserRouter>
     <Container maxWidth="lg">
       <Navbar />
@@ -15,10 +17,10 @@ const App = () => (
         <Route path="/" exact component={Home} />
         <Route path="/posts/search" exact component={Home} />
         <Route path="/posts/:id" exact component={PostDetails} />
-        <Route path="/auth" exact component={Auth} />
+        <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
       </Switch>
     </Container>
   </BrowserRouter>
-);
+)};
 
 export default App;

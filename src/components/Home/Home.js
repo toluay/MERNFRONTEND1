@@ -8,6 +8,7 @@ import Form from '../Form/Form';
 import Pagination from '../Pagination';
 import useStyles from './styles';
 const Home = () => {
+  const classes = useStyles();
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
 
