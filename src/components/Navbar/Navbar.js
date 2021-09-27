@@ -20,10 +20,10 @@ const Navbar = () => {
     const logout = () => {
 
         dispatch({ type: actionType.LOGOUT });
-
+        setUser(null);
         history.push('/auth');
 
-        setUser(null);
+       
     };
 
   useEffect(() => {
